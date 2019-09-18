@@ -10,11 +10,11 @@ metadata:
 spec:
   tls:
     - hosts:
-        - my-family-daybook.com
-        - www.my-family-daybook.com
+        - myfamilydaybook.com
+        - www.myfamilydaybook.com
       secretName: my-family-daybook-com
   rules:
-    - host: my-family-daybook.com
+    - host: myfamilydaybook.com
       http:
         paths:
           - path: /?(.*)
@@ -25,7 +25,7 @@ spec:
             backend:
               serviceName: server-cluster-ip-service
               servicePort: 5000
-    - host: www.my-family-daybook.com
+    - host: www.myfamilydaybook.com
       http:
         paths:
           - path: /?(.*)
