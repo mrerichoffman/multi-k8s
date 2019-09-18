@@ -1,20 +1,20 @@
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
-  name: k8s-multi-com-tls
+  name: my-family-daybook-tls
 spec:
-  secretName: k8s-multi-com
+  secretName: my-family-daybook-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
-  commonName: k8s-multi.com
+  commonName: myfamilydaybook.com
   dnsNames:
-    - k8s-multi.com
-    - www.k8s-multi.com
+    - myfamilydaybook.com
+    - www.myfamilydaybook.com
   acme:
     config:
       - http01:
           ingressClass: nginx
         domains:
-          - k8s-multi.com
-          - www.k8s-multi.com
+          - myfamilydaybook.com
+          - www.myfamilydaybook.com
